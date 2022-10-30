@@ -1,0 +1,12 @@
+.ipynb_checkpoints/
+__pycache__/
+config.profile
+replays_prod.tar.gz
+replays_prod/
+training-data/
+reinforcement-config.profile
+log.log
+overnight-run.log
+*.log
+start-data-to-check-on-later.txt
+start-data-to-check-on-later.txt
