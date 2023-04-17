@@ -67,18 +67,18 @@ def output_tensor_to_action(action_tensor):
 
 
 time.sleep(2)
-general = conv4deep3.Conv4Deep3("cpu")
-general.load_state_dict(torch.load('/Users/cwest/code/CS474/final-project/src/generals/weights/simple-conv4deep2-only-up.weights'))
+# general = conv4deep3.Conv4Deep3("cpu")
+# general.load_state_dict(torch.load('src/generals/weights/simple-conv4deep2-3-Q-learning.weights'))
 for output in updates_generator:
     grid = client._map.grid
     territories = find_all_owned_territory_coords(grid)
-    grid_tensor = convert_map_grid_to_tensor(grid)
-    action_tensor = general(grid_tensor)
-    y1, x1, direction = output_tensor_to_action(action_tensor)
+    # grid_tensor = convert_map_grid_to_tensor(grid)
+    # action_tensor = general(grid_tensor)
+    # y1, x1, direction = output_tensor_to_action(action_tensor)
     if len(territories) > 0:
-        # y1, x1 = random.choice(territories)
+        y1, x1 = random.choice(territories)
 
-        # direction = random.choice(["UP", "DOWN", "LEFT", "RIGHT"])
+        direction = random.choice(["UP", "DOWN", "LEFT", "RIGHT"])
         x2 = x1
         y2 = y1
         if direction == "UP":
